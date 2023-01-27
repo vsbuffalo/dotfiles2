@@ -1,6 +1,6 @@
 ## Dotfiles2
 
-Removing the cruft from my first dotfiles.
+Removing the cruft from my first dotfiles. Out with the old, in with the new!
 
 ## Installation
 

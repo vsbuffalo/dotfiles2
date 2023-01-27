@@ -1,11 +1,17 @@
 local lsp = require('lsp-zero')
 lsp.preset('recommended')
 
--- (Optional) Configure lua language server for neovim
+
+lsp.ensure_installed({
+    'texlab',
+    'pylsp',
+    'sumneko_lua',
+    'clangd',
+    --'r_language_server'
+})
+
 lsp.nvim_workspace()
-
 lsp.setup()
-
 
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
