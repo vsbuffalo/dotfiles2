@@ -21,3 +21,7 @@ vim.opt.scrolloff = 8
 
 vim.opt.relativenumber = true
 
+-- spell check
+vim.opt.spell = true
+vim.opt.spelllang = "en_us"
+

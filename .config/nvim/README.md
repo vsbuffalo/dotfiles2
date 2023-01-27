@@ -14,4 +14,3 @@ We also need to install some Python components:
     $ brew update
     $ brew reinstall --HEAD neovim
 
-
