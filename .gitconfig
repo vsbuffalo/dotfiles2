@@ -1,0 +1,34 @@
+[user]
+	name = Vince Buffalo
+	email = vsbuffalo@gmail.com
+[credential]
+	help = osxkeychain
+[push]
+	default = simple
+[core]
+	editor = vim
+	excludesfile = /Users/vsb/.global_ignore
+[color]
+	ui = true
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	squash-all = "!f(){ git reset $(git commit-tree HEAD^{tree} -m \"${1:-A new start}\");};f"
+[http]
+	postBuffer = 524288000
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+[github]
+	user = vsbuffalo
+[diff "nb2md"]
+	textconv = nb2md
+[init]
+	defaultBranch = main
