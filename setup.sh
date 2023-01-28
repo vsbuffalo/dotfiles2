@@ -58,13 +58,15 @@ function linkdotfile {
 
 # check that the key pre-requisites are met:
 check_preq gcc
-check_preq brew
 check_preq "command -v ~/anaconda/bin/conda"
 
-# install Homebrew main programs
-install_brew ripgrep
-install_brew tmux
-install_brew nvim
+# install Homebrew main programs if on a mac
+if [[ "$(uname)" == "Darwin" ]]; then
+	check_preq brew
+	install_brew ripgrep
+	install_brew tmux
+	install_brew nvim
+fi
 
 # link over git stuff
 linkdotfile .gitconfig

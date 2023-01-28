@@ -38,3 +38,4 @@ vim.keymap.set("n", "<A-l>", "<C-w>l")
 -- emacs-like movement in insert mode
 vim.keymap.set("i", "<M-b>", "<Esc>b")
 vim.keymap.set("i", "<M-f>", "<Esc>f")
+
