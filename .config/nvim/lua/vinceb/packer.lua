@@ -20,7 +20,7 @@ return require('packer').startup(function(use)
 		end
 	})
 
-	use ({'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'}})
+	use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
 	use ('mbbill/undotree')
 
@@ -65,5 +65,15 @@ return require('packer').startup(function(use)
             timer = 500,
         },
     })
+
+    -- fonts for lualine and lualine
+    use 'nvim-tree/nvim-web-devicons'
+
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
+
+
 
 end)

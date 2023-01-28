@@ -26,8 +26,12 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
--- packer sync
+-- quick access to packer edit ('se') and packer sync ('ss)
+vim.keymap.set("n", "<leader>se", ":e $HOME/.config/nvim/lua/vinceb/packer.lua<CR>")
 vim.keymap.set("n", "<leader>ss", vim.cmd.PackerSync)
+
+-- quick access to remap edit ('re')
+vim.keymap.set("n", "<leader>re", ":e $HOME/.config/nvim/lua/vinceb/remap.lua<CR>")
 
 -- navigation hacks to move around split buffers more effectively
 vim.keymap.set("n", "<A-h>", "<C-w>h")
