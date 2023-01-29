@@ -32,12 +32,30 @@ export EDITOR=nvim
 # alias vim to neovim and old vim to shitvim
 alias vim=nvim
 
-## ----------- custom aliases ----------- ##
+## ----------- jupyter stuff ----------- ##
 
 # this is for opening up jupyter lab instances in chrome
 app() {
   /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --app="$1"
 }
+
+## ----------- snakemake stuff ----------- ##
+# for snakemake-style log directories, e.g. logs/error logs/out, 
+# get the most recent files
+rlogs() {
+  ((echo "-- error --"; (ls -Art logs/error/ | tail -n 5)); (echo "-- out --"; (ls -Art logs/out/ | tail -n 5)))
+}
+
+# look at the last stderr log in less
+lerr() {
+    less logs/error/$(ls -Art logs/error/ | tail -n 1)
+}
+
+# look at the last stdout log in less
+lout() {
+    less logs/out/$(ls -Art logs/out/ | tail -n 1)
+}
+
 
 ## ----------- history stuff ----------- ##
 HISTSIZE=10000
